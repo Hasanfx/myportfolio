@@ -3,7 +3,7 @@ import React from "react";
 const Skills: React.FC = () => {
   return (
     <section id="skills" className="">
-    <div className="bg-black pb-10"> {/* Remove h-screen here */}
+    <div className="bg-black pb-10"> 
     <h2 className="pt-2 mb-12 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-200 sm:text-3xl">
         Skills
       </h2>      
