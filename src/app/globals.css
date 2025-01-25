@@ -2,20 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+QLD+Guides&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e5e5e5;  /* Dark grey */
+  --foreground: #5d5d5d;  /* Light grey */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Apply gradient to html and body */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, var(--background), var(--foreground));  /* Gradient from dark grey to light grey */
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  /* Remove background color, as the gradient is already applied */
 }
+.card {
+  @apply block rounded-xl border border-gray-800 p-6 text-center
+}
+.project{
+  @apply flex w-full items-center rounded-xl border border-black border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 sm:flex-col sm:hover:shadow-2xl
+
+}
+
+.hidden {
+  opacity: 0;
+  filter:blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.opacity-0 {
+  opacity: 0;
+  filter:blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter:blur(0);
+  transform: translateX(0);
+  
+}
+.opacity-1 {
+  opacity: 1;
+  filter:blur(0);
+  transform: translateX(0);
+}
+
+
+.card:nth-child(1) {
+transition-delay: 200ms;
+}
+.card:nth-child(2) {
+  transition-delay: 400ms;
+}
+.card:nth-child(3) {
+  transition-delay: 600ms;
+}
+.card:nth-child(4) {
+  transition-delay: 200ms;
+}
+.card:nth-child(5) {
+  transition-delay: 400ms;
+}
+.card:nth-child(6) {
+  transition-delay: 600ms;
+}
+
+.project:nth-child(1) {
+  transition-delay: 200ms;
+  }
+  .project:nth-child(2) {
+    transition-delay: 400ms;
+  }
+  .project:nth-child(3) {
+    transition-delay: 600ms;
+  }
