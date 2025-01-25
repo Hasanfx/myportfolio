@@ -1,9 +1,8 @@
 "use client"
-import About2 from "@/components/About2";
+import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import NavBar from "@/components/NavBar";
-import Animation from "@/components/Animation";
 import Footer from "@/components/footer";
 import { useIntersectionObserver } from "@/scripts/animation";
 const Home = () => {
@@ -15,7 +14,7 @@ const Home = () => {
       <NavBar />
 
 
-    {/* <Animation/> */}
+    
       <section
         id="welcome"
         className="h-screen items-center justify-center flex  show"
@@ -29,7 +28,7 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <About2 />
+      <About />
       <Skills />
       <Projects />
       {/* <Contact /> */}
